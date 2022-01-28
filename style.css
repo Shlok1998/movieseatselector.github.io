@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: rgba(0, 0, 0, 0.9);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 0px;
+   font-family: 'Lato', sans-serif;
+   height: 100vh;
+   font-weight: bold;
+   color: white;
+}
+
+.movie-container {
+   margin: 20px 0px;
+}
+
+.movie-container select {
+   margin-left: 20px;
+   border-radius: 5px;
+   padding: 5px 5px;
+   background-color: antiquewhite;
+   font-family: 'Lato', sans-serif;
+   font-weight: bold;
+   font-size: 16px;
+}
+
+.movie-container select option {
+   font-weight: bold;
+   font-size: 15px;
+}
+
+.movie-container select:focus {
+   border: 2px solid rgb(255, 0, 0);
+   background-color: rgb(32, 34, 34);
+   color: white;
+}
+
+.seat {
+   background-color: rgb(255, 255, 255, 0.8);
+   height: 10px;
+   width: 12px;
+   margin: 3px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+
+.seat:not(.occupied):hover {
+   cursor: pointer;
+   transform: scale(1.2);
+}
+.seat-selector .seat:not(.occupied):hover {
+   cursor: default;
+   transform: scale(1);
+}
+
+.seat.selected {
+   background-color: rgb(5, 253, 170);
+}
+
+.seat.occupied {
+   background-color: red;
+}
+
+.seat:nth-of-type(2) {
+   margin-right: 20px;
+}
+
+.seat:nth-last-of-type(2) {
+   margin-left: 20px;
+}
+
+.row {
+   display: flex;
+}
+
+.seat-selector {
+   display: flex;
+   background-color: rgb(0, 0, 0, 0.6);
+   list-style-type: none;
+   padding: 10px 10px;
+   justify-content: space-between;
+}
+
+.seat-selector li {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0px 10px;
+}
+
+.seat-selector li small {
+   margin-left: 2px;
+}
+
+.screen {
+   background-color: white;
+   height: 50px;
+   width: 100%;
+   margin: 15px 0;
+   transform: rotateX(-45deg);
+   box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.container {
+   perspective: 400px;
+   margin-bottom: 30px;
+}
+
+p.text span {
+   color: aqua;
+   margin: 0px 5px;
+}
